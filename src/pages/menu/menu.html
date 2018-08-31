@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-navbar>
+      <ion-title>
+        Task Force Menu
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item detail-none block (click)="openPage('IndexPage')">
+        <ion-icon item-start>DashBoard</ion-icon>
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-row align-items-center>
+        <ion-col class="userFoot">
+          Test Demo
+        </ion-col>
+        <ion-col>
+          <button ion-button full clear icon-left (click)="logout()" color="light">
+            <ion-icon class="userFoot"></ion-icon>
+            Cerrar sesion
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-nav #content main [root]="rootPage"></ion-nav>
