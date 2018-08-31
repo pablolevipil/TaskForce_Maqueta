@@ -11,6 +11,7 @@ import { IndexPage } from '../index';
 export class MenuPage {
 
   @ViewChild(Nav) nav:Nav;
+  public openSearch = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private appCtrl:App) {
   }

@@ -1,16 +1,30 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-navbar>
-      <ion-title>
-        Task Force Menu
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-
   <ion-content>
+    <ion-toolbar>
+      <img src="../assets/imgs/stiv.png">
+    </ion-toolbar>
+    <ion-searchbar placeholder="Busqueda">
+    </ion-searchbar>
+    <ion-list no-lines>
+      <ion-item><b>Navegacion Usuarios</b></ion-item>
+    </ion-list>
+    <ion-list no-lines>
+      <button color="itemsMenu" ion-item (click)="openPage('IndexPage')" menuClose>
+        <ion-icon item-left name="home"> DashBoard</ion-icon>
+      </button>
+      <button ion-item menuClose>
+        <ion-icon name="folder" item-start> Query Analitica</ion-icon>
+      </button>
+    </ion-list>
     <ion-list>
-      <button ion-item detail-none block (click)="openPage('IndexPage')">
-        <ion-icon item-start>DashBoard</ion-icon>
+      <ion-item><b>Administrador</b></ion-item>
+    </ion-list>
+    <ion-list no-lines>
+      <button ion-item (click)="openPage('IndexPage')" menuClose>
+        <ion-icon name="folder" item-start> Mantenedores</ion-icon>
+      </button>
+      <button ion-item (click)="openPage('IndexPage')" menuClose>
+        <ion-icon name="folder" item-start> Plataforma</ion-icon>
       </button>
     </ion-list>
   </ion-content>
@@ -19,7 +33,7 @@
     <ion-toolbar>
       <ion-row align-items-center>
         <ion-col class="userFoot">
-          Test Demo
+          <ion-icon name="person" item-start> Test Demo</ion-icon>
         </ion-col>
         <ion-col>
           <button ion-button full clear icon-left (click)="logout()" color="light">
